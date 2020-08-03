@@ -643,12 +643,6 @@ html body .mainvisual {
   /*slider-wrap*/
 }
 
-@media (max-width: 768px) {
-  html body .mainvisual {
-    margin-bottom: 400px;
-  }
-}
-
 html body .mainvisual-wrap {
   width: 70vw;
   max-width: 100%;
