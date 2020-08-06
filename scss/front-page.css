@@ -333,6 +333,7 @@ html body {
   overflow: hidden;
   background-position: 13% 0%;
   background-repeat: no-repeat;
+  font-family: 'Noto Sans JP', sans-serif;
   /*header*/
   /*intro*/
   /*price*/
@@ -388,7 +389,7 @@ html body header #header-inner {
 }
 
 html body header #header-inner .logo {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: bold;
   width: 280px;
@@ -419,7 +420,7 @@ html body header #header-inner .logo:hover {
 }
 
 html body header #header-inner .header-nav {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   /*ul*/
 }
 
@@ -442,6 +443,7 @@ html body header #header-inner .header-nav ul {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  font-weight: bold;
   /*g-nav*/
   /*nav-btn*/
 }
@@ -509,8 +511,7 @@ html body header #header-inner .header-nav ul .nav-btn {
 
 html body header #header-inner .header-nav ul .nav-btn a {
   width: 100%;
-  background-color: #418B44;
-  color: white;
+  background-color: #FFDB41;
   padding: 20px 66px;
   display: block;
   border-radius: 4px;
@@ -527,7 +528,8 @@ html body header #header-inner .header-nav ul .nav-btn a {
 }
 
 html body header #header-inner .header-nav ul .nav-btn a:hover {
-  background-color: #FFDB41;
+  background-color: #418B44;
+  color: white;
   -webkit-transition: 0.6s;
   transition: 0.6s;
   -webkit-box-shadow: 6px 6px 10px #00000029;
@@ -638,21 +640,36 @@ html body header #header-inner .btn-gnavi.hb-open span:nth-of-type(3) {
 html body .mainvisual {
   margin-bottom: 0px;
   background-image: url(../img/whiteball.png);
-  background-position: 1100px 550px;
+  background-position: 78vw 37vw;
   padding-bottom: 340px;
   /*slider-wrap*/
 }
 
+@media (max-width: 768px) {
+  html body .mainvisual {
+    margin-bottom: 60px;
+    background-position: 67vw 27vw;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .mainvisual {
+    margin-bottom: 60px;
+    background-position: 40vw 27vw;
+  }
+}
+
 html body .mainvisual-wrap {
-  width: 70vw;
+  width: 80vw;
   max-width: 100%;
   margin: 0 auto;
   position: relative;
-  background-color: #FFDB41;
   height: 46vw;
   /*90vh*/
-  -webkit-box-shadow: 6px 6px 10px #00000029;
-          box-shadow: 6px 6px 10px #00000029;
+  -webkit-box-shadow: 6px 6px 6px #00000029;
+          box-shadow: 6px 6px 6px #00000029;
+  background-image: url(../img/mainvisual-background.png);
+  background-size: 100vw;
   /*h3*/
   /*.dot-number*/
 }
@@ -665,7 +682,7 @@ html body .mainvisual-wrap {
 
 @media (max-width: 768px) {
   html body .mainvisual-wrap {
-    width: 77vw;
+    width: 90vw;
     height: 52vw;
   }
 }
@@ -679,7 +696,7 @@ html body .mainvisual-wrap {
 @media (max-width: 425px) {
   html body .mainvisual-wrap {
     height: 60vw;
-    width: 80vw;
+    width: 92vw;
   }
 }
 
@@ -687,11 +704,18 @@ html body .mainvisual-wrap h3 {
   text-align: center;
   padding: 2vw 0px;
   font-weight: bold;
+  color: white;
 }
 
 @media (max-width: 560px) {
   html body .mainvisual-wrap h3 {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .mainvisual-wrap h3 {
+    font-size: 14px;
   }
 }
 
@@ -841,8 +865,8 @@ html body .mainvisual-wrap .slider-wrap .slick-dots li button:before {
 }
 
 html body .mainvisual-wrap .slider-wrap .slick-dots li:first-child:before {
-  content: '02';
-  color: #418B44;
+  content: '01';
+  color: #FFDB41;
   position: absolute;
   top: 5px;
   left: -35px;
@@ -885,7 +909,7 @@ html body .mainvisual-wrap .slider-wrap .slick-dots .slick-active button:before 
   position: absolute;
   top: 0;
   left: 0;
-  border-bottom: 3px solid #418B44;
+  border-bottom: 3px solid #FFDB41;
 }
 
 @media (max-width: 425px) {
@@ -907,10 +931,24 @@ html body .mainvisual-wrap .slider-wrap .slider li {
 }
 
 html body .mainvisual-wrap .slider-wrap .slider li img {
-  width: 61vw;
+  width: 67vw;
   height: 34.5vw;
   margin-right: 7vw;
   margin-left: 7vw;
+}
+
+@media (max-width: 768px) {
+  html body .mainvisual-wrap .slider-wrap .slider li img {
+    width: 73vw;
+    height: 36.5vw;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .mainvisual-wrap .slider-wrap .slider li img {
+    width: 73vw;
+    height: 39.5vw;
+  }
 }
 
 html body .intro {
@@ -922,6 +960,12 @@ html body .intro {
 @media (max-width: 560px) {
   html body .intro {
     margin-bottom: 200px;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .intro {
+    margin-bottom: 160px;
   }
 }
 
@@ -1057,7 +1101,7 @@ html body .intro-wrap .intro-box .box-content h3 {
   font-size: 2.8vw;
   margin-bottom: 40px;
   letter-spacing: 4px;
-  /*intro-color-title*/
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 @media (max-width: 1024px) {
@@ -1074,13 +1118,10 @@ html body .intro-wrap .intro-box .box-content h3 {
 
 @media (max-width: 425px) {
   html body .intro-wrap .intro-box .box-content h3 {
-    font-size: 18px;
-    margin-bottom: 30px;
+    width: 240px;
+    text-align: left;
+    margin-bottom: 25px;
   }
-}
-
-html body .intro-wrap .intro-box .box-content h3 .intro-color-title {
-  color: #317F3B;
 }
 
 html body .intro-wrap .intro-box .box-content p {
@@ -1123,7 +1164,7 @@ html body .intro-wrap .background-title p {
   position: absolute;
   color: black;
   font-size: 19vw;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   top: -120px;
   left: -300px;
@@ -1177,6 +1218,12 @@ html body .profile {
   background-image: url(../img/whiteball-2.png);
   background-position: 40px 420px;
   /*box*/
+}
+
+@media (max-width: 425px) {
+  html body .profile {
+    background-position: 30px 260px;
+  }
 }
 
 html body .profile-box {
@@ -1304,9 +1351,10 @@ html body .profile-box .profile-part {
 }
 
 html body .profile-box .profile-part h3 {
-  color: #418B44;
   margin-bottom: 32px;
   font-size: 30px;
+  color: #4D391B;
+  font-family: 'Montserrat', sans-serif;
   /*span*/
 }
 
@@ -1319,8 +1367,9 @@ html body .profile-box .profile-part h3 {
 
 html body .profile-box .profile-part h3 span {
   font-size: 20px;
-  font-family: Noto Sans JP;
   margin-left: 18px;
+  font-weight: normal;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -1332,7 +1381,6 @@ html body .profile-box .profile-part h3 span {
 html body .profile-box .profile-part h4 {
   margin-bottom: 25px;
   font-size: 28px;
-  font-family: Noto Sans JP;
   margin-right: 18px;
   letter-spacing: 11px;
 }
@@ -1354,6 +1402,7 @@ html body .profile-box .profile-part h4 span {
   font-size: 17px;
   letter-spacing: 0px;
   font-style: italic;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -1401,7 +1450,7 @@ html body .profile-box .profile-part .profile-btn {
 
 html body .profile-box .profile-part .profile-btn a {
   display: block;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   padding: 20px 80px;
   font-size: 20px;
   font-weight: bold;
@@ -1423,8 +1472,8 @@ html body .profile-box .profile-part .profile-btn a {
 }
 
 html body .profile-box .name-en {
-  font-family: Montserrat;
-  color: #418B44;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFDB41;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -1470,6 +1519,7 @@ html body .works h2 {
   text-align: center;
   font-size: 60px;
   margin-bottom: 65px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 560px) {
@@ -1546,7 +1596,7 @@ html body .works-wrap .works-item.active {
 }
 
 html body .works-wrap h4 {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   /*.item-name-jps*/
   /*.item-name-jp*/
@@ -1565,8 +1615,9 @@ html body .works-wrap h4 {
 }
 
 html body .works-wrap h4 .item-name-jp {
-  font-family: Noto Sans JP;
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 28px;
+  font-weight: 300;
 }
 
 @media (max-width: 1024px) {
@@ -1590,6 +1641,7 @@ html body .price {
   padding-top: 105px;
   padding-bottom: 160px;
   /*about-price*/
+  /*before*/
 }
 
 @media (max-width: 560px) {
@@ -1603,6 +1655,7 @@ html body .price h2 {
   font-size: 60px;
   font-weight: bold;
   margin-bottom: 75px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 560px) {
@@ -1630,6 +1683,7 @@ html body .price table {
   transition: all 1.3s;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
+  /*before*/
 }
 
 @media (max-width: 768px) {
@@ -1638,24 +1692,32 @@ html body .price table {
   }
 }
 
-html body .price table .menu-green {
-  color: #FFFFFF;
-  background-color: #418B44;
+html body .price table .menu {
+  background-color: #FFFFFF;
   width: 20vw;
   /*280*/
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-size: 26px;
+  /*img*/
+  /*menu-name*/
 }
 
 @media (max-width: 1024px) {
-  html body .price table .menu-green {
+  html body .price table .menu {
     font-size: 2.5vw;
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .price table .menu {
+    width: 25%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .price table .menu-green {
+  html body .price table .menu {
     display: block;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 0px;
@@ -1669,47 +1731,55 @@ html body .price table .menu-green {
 }
 
 @media (max-width: 425px) {
-  html body .price table .menu-green {
+  html body .price table .menu {
     width: 290px;
+    font-size: 26px;
+    padding-bottom: 20px;
   }
 }
 
-html body .price table .menu-yellow {
-  width: 20vw;
-  /*280*/
-  color: #FFFFFF;
-  background-color: #FFDB41;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  font-size: 26px;
-}
-
-@media (max-width: 1024px) {
-  html body .price table .menu-yellow {
-    font-size: 2.5vw;
+@media (max-width: 768px) {
+  html body .price table .menu img {
+    width: 60%;
   }
 }
 
 @media (max-width: 560px) {
-  html body .price table .menu-yellow {
-    display: block;
-    width: 370px;
-    margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 22px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 10px;
+  html body .price table .menu img {
+    width: 120px;
   }
 }
 
 @media (max-width: 425px) {
-  html body .price table .menu-yellow {
-    width: 290px;
+  html body .price table .menu img {
+    width: 90px;
+  }
+}
+
+html body .price table .menu .menu-name {
+  letter-spacing: 0.3em;
+}
+
+@media (max-width: 1024px) {
+  html body .price table .menu .menu-name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .price table .menu .menu-name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .price table .menu .menu-name {
+    font-size: 24px;
   }
 }
 
 html body .price table .about-menu {
+  font-size: 26px;
   width: 27vw;
   /*380*/
   padding: 2.1vw 2.8vw;
@@ -1717,19 +1787,26 @@ html body .price table .about-menu {
   background-color: #FFFFFF;
   line-height: 1.25;
   position: relative;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /*sub-menu*/
 }
 
 @media (max-width: 1024px) {
   html body .price table .about-menu {
-    font-size: 1.5vw;
+    font-size: 26px;
     padding: 2.1vw 2.2vw;
     /*30/40*/
+    width: 260px;
   }
 }
 
 @media (max-width: 768px) {
   html body .price table .about-menu {
-    font-size: 1.9vw;
+    font-size: 3vw;
+    width: 35%;
+    padding: 3vw 15px;
   }
 }
 
@@ -1739,115 +1816,249 @@ html body .price table .about-menu {
     width: 370px;
     margin: 0 auto;
     font-size: 16px;
-    padding: 30px 5vw;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .price table .about-menu {
+    padding-bottom: 30px;
+    padding-top: 40px;
   }
 }
 
 @media (max-width: 425px) {
   html body .price table .about-menu {
     width: 290px;
+    font-size: 24px;
   }
 }
 
-html body .price table .about-menu::after {
+html body .price table .about-menu .sub-menu {
+  font-size: 15px;
+  padding-top: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  html body .price table .about-menu .sub-menu {
+    font-size: 13px;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .price table .about-menu .sub-menu {
+    font-size: 15px;
+  }
+}
+
+html body .price table .about-menu::before {
   content: "";
   width: 1px;
   border-right: 1px solid #707070;
   position: absolute;
-  right: 0px;
-  top: 30px;
+  left: 0px;
+  top: 2vw;
   bottom: 30px;
-  height: 100px;
+  height: 160px;
 }
 
 @media (max-width: 1024px) {
-  html body .price table .about-menu::after {
-    top: 2vw;
+  html body .price table .about-menu::before {
+    top: 20px;
+    height: 133px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .price table .about-menu::before {
+    height: 115px;
   }
 }
 
 @media (max-width: 560px) {
-  html body .price table .about-menu::after {
-    display: none;
+  html body .price table .about-menu::before {
+    top: -135px;
+    left: 180px;
+    height: 300px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 425px) {
+  html body .price table .about-menu::before {
+    top: -95px;
+    left: 145px;
+    height: 220px;
   }
 }
 
 html body .price table .about-price {
   width: 25vw;
-  font-family: Noto Sans JP;
+  font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
   background-color: #FFFFFF;
-  padding: 30px 2.8vw;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 40px 2.8vw;
+  position: relative;
+  font-size: 26px;
   /*price-number*/
 }
 
 @media (max-width: 1024px) {
   html body .price table .about-price {
     padding: 30px 2.2vw;
+    width: 260px;
   }
 }
 
 @media (max-width: 768px) {
   html body .price table .about-price {
-    padding: 30px 6.2vw;
+    font-size: 3vw;
+    padding: 3vw 15px;
   }
 }
 
 @media (max-width: 560px) {
   html body .price table .about-price {
     display: block;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-top-right-radius: 0px;
     width: 370px;
     margin: 0 auto;
-    padding-top: 10px;
-    font-size: 18px;
-    margin-bottom: 30px;
+    padding-top: 35px;
+    font-size: 24px;
   }
 }
 
 @media (max-width: 425px) {
   html body .price table .about-price {
     width: 290px;
+    font-size: 24px;
+    padding-top: 25px;
   }
 }
 
 html body .price table .about-price .price-number {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 3.3vw;
   /*46px*/
   background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(0%, #FFDB41));
   background: linear-gradient(transparent 70%, #FFDB41 0%);
+  font-weight: bold;
   /*sub-price*/
 }
 
-@media (max-width: 560px) {
+@media (max-width: 1024px) {
   html body .price table .about-price .price-number {
-    font-size: 35px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 768px) {
   html body .price table .about-price .price-number {
-    width: 220px;
+    font-size: 5vw;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .price table .about-price .price-number {
+    font-size: 35px;
+    width: 200px;
   }
 }
 
 html body .price table .about-price .price-number .sub-price {
   font-size: 1.7vw;
   /*24*/
+  font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+  html body .price table .about-price .price-number .sub-price {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .price table .about-price .price-number .sub-price {
+    font-size: 3vw;
+  }
 }
 
 @media (max-width: 560px) {
   html body .price table .about-price .price-number .sub-price {
+    font-size: 20px;
+  }
+}
+
+html body .price table .about-price .sub-extra {
+  font-size: 15px;
+  display: block;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  html body .price table .about-price .sub-extra {
+    padding-top: 1.5vw;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .price table .about-price .sub-extra {
     font-size: 16px;
+  }
+}
+
+html body .price .about-price::before {
+  content: "";
+  width: 1px;
+  border-right: 1px solid #707070;
+  position: absolute;
+  left: 0px;
+  top: 2vw;
+  bottom: 25px;
+  height: 160px;
+  /*pc*/
+  /*tab*/
+}
+
+@media (max-width: 1024px) {
+  html body .price .about-price::before {
+    top: 20px;
+    height: 133px;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .price .about-price::before {
+    height: 115px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .price .about-price::before {
+    top: -145px;
+    left: 180px;
+    height: 300px;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 425px) {
+  html body .price .about-price::before {
+    top: -105px;
+    left: 145px;
+    height: 220px;
   }
 }
 
@@ -1859,8 +2070,43 @@ html body .price table.active {
           transform: scale(1);
 }
 
+html body .note {
+  padding-top: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  html body .note {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  html body .note {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 425px) {
+  html body .note {
+    font-size: 4vw;
+  }
+}
+
+html body .note-responsive {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  html body .note-responsive {
+    display: initial;
+  }
+}
+
 html body .footer {
-  background-color: #418B44;
+  background-image: url(../img/footer-background.png);
+  background-size: cover;
   /*footer-inner*/
 }
 
@@ -1891,8 +2137,9 @@ html body .footer-inner {
 
 html body .footer-inner .footer-logo {
   font-size: 50px;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   color: #FFFFFF;
+  font-weight: bold;
 }
 
 @media (max-width: 1024px) {
@@ -1918,7 +2165,7 @@ html body .footer-inner .footer-nav {
 }
 
 html body .footer-inner .footer-nav ul {
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1943,6 +2190,7 @@ html body .footer-inner .footer-nav ul {
 html body .footer-inner .footer-nav ul li {
   margin-left: 60px;
   line-height: 60px;
+  font-weight: bold;
   /*a*/
 }
 
@@ -1965,6 +2213,7 @@ html body .footer-inner .footer-nav ul li:hover {
 
 html body .footer-inner .footer-nav ul .f-nav-privacy {
   font-size: 20px;
+  font-weight: normal;
 }
 
 @media (max-width: 1024px) {
@@ -2016,6 +2265,7 @@ html body .footer .footer-center .footer-tel {
 
 html body .footer .footer-center .footer-tel h3 {
   font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -2058,6 +2308,7 @@ html body .footer .footer-center .footer-contact {
 
 html body .footer .footer-center .footer-contact h3 {
   font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width: 768px) {
