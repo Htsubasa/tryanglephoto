@@ -3,12 +3,12 @@ $(function () {
   $(".slider").slick({
     arrow: true,
     autoplay: true,
-    autoplaySpeed: 1500,
+    autoplaySpeed: 15000,
     centerMode: true,
     dots: true,
     // fade: true,
     slidesToShow: 2,
-    speed: 2000,
+    speed: 1000,
     variableWidth: true,
     centerMode: true,
     centerPadding: '30%',
@@ -43,6 +43,39 @@ $(function(){
 		$(".btn-gnavi").css({display:"none"});
 	});
 });
+
+
+
+
+
+$(function () {
+  var topBtn = $('.footer-center'); // ボタンを指定
+  topBtn.hide(); //最初は隠しておく。CSSで隠してもオッケー
+ 
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 150) { // 100px以上スクロールしたら出てくる
+      topBtn.fadeIn();
+    } else {
+      topBtn.fadeOut();
+    }
+ 
+    scrollHeight = $(document).height();
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    footHeight = $("#footer").innerHeight(); // ここでフッターの高さを取得
+    if ( scrollHeight - scrollPosition  <= footHeight ) { // フッター付近まで来たら
+      topBtn.css({
+        "position":"absolute",
+        "bottom": footHeight + 0 // フッターの65px上で止まる
+      });
+    } else { // それ以外は画面下から20pxの位置に固定
+      topBtn.css({
+      "position":"fixed",
+    });
+    }
+ 
+  });
+});
+
 
 
 
