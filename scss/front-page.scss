@@ -60,17 +60,20 @@ body{
 
 header{
 
-  margin-bottom: 50px;
- 
-  
+  margin-bottom: 30px;
 
+  img{
+    position: absolute;
+    z-index: -1;
+    width: 25%;
+  }
 
   #header-inner{
     max-width: 1340px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding-top: 50px;  
+    padding-top: 40px;  
     padding-right: 15px;
     padding-left: 15px;
     box-sizing: border-box;
@@ -353,20 +356,19 @@ header{
   }
 
 
-
   
   &-wrap{
-    width: 80vw;
+    width: 76vw;
     max-width: 100%;
     margin: 0 auto;
     position: relative;
-    height: 46vw;/*90vh*/
+    height: 42vw;/*90vh*/
     box-shadow: 6px 6px 6px #00000029;
     background-image: url(../img/mainvisual-background.png);
     background-size: 100vw;
 
     @include pc{
-      height: 50vw;
+      height: 44vw;
     }
 
     @include tab{
@@ -385,7 +387,7 @@ header{
 
     h3{
       text-align: center;
-      padding: 2vw 0px;
+      padding: 1.7vw 0px;
       font-weight: bold;
       color: white;
 
@@ -395,6 +397,7 @@ header{
 
       @include sp-second{
         font-size: 14px;
+        padding: 2.4vw 0px;
       }
 
 
@@ -410,10 +413,14 @@ header{
 
     .f-corner::before, .f-corner::after {
       content: '';
-      width: 80px;
-      height: 80px;
+      width: 86px;
+      height: 86px;
       position: absolute;
 
+      @include tab{
+        width: 60px;
+        height: 60px; 
+      }
 
       @include sp{
         width: 50px;
@@ -428,10 +435,10 @@ header{
     }
     
     .f-corner::before {
-      border-left: solid 10px #ffffff;
-      border-top: solid 10px #ffffff;
-      top: 6%;
-      left: 3%;
+      border-left: solid 14px #ffffff;
+      border-top: solid 14px #ffffff;
+      top: 6.5%;
+      left: 3.4%;
 
       @include sp{
         border-left: solid 7px #ffffff;
@@ -443,10 +450,10 @@ header{
   
    
     .f-corner::after {
-      border-right: solid 10px #ffffff;
-      border-bottom: solid 10px #ffffff;
-      bottom: 6%;
-      right: 3%;
+      border-right: solid 14px #ffffff;
+      border-bottom: solid 14px #ffffff;
+      bottom: 5.5%;
+      right: 3.4%;
 
       @include sp{
         border-right: solid 7px #ffffff;
@@ -457,9 +464,16 @@ header{
 
     .s-corner::before, .s-corner::after {
       content: '';
-      width: 80px;
-      height: 80px;
+      width: 86px;
+      height: 86px;
       position: absolute;
+
+
+      @include tab{
+        width: 60px;
+        height: 60px; 
+      }
+
 
       @include sp{
         width: 50px;
@@ -475,10 +489,10 @@ header{
     }
     
     .s-corner::before {
-      border-right: solid 10px #ffffff;
-      border-top: solid 10px #ffffff;
+      border-right: solid 14px #ffffff;
+      border-top: solid 14px #ffffff;
       top: 6%;
-      right: 3%;
+      right: 3.4%;
 
       @include sp{
         border-right: solid 7px #ffffff;
@@ -489,10 +503,10 @@ header{
   
    
     .s-corner:after{
-      border-left: solid 10px #ffffff;
-      border-bottom: solid 10px #ffffff;
+      border-left: solid 14px #ffffff;
+      border-bottom: solid 14px #ffffff;
       bottom: 6%;
-      left: 3%;
+      left: 3.4%;
 
 
       @include sp{
@@ -513,6 +527,8 @@ header{
         li{
           margin-right: 7px;
           margin-left: 7px;
+          @include font-type;
+
 
           @include sp-second{
             margin-right: 2px;
@@ -541,7 +557,7 @@ header{
           content: '01';
           color: #FFDB41;
           position: absolute;
-          top: 5px;
+          top: 9px;
           left: -35px;
           font-weight: bold; 
         
@@ -555,7 +571,7 @@ header{
           content: '03';
           color: #ffffff;
           position: absolute;
-          top: 5px;
+          top: 9px;
           right: -52px;
           font-weight: bold;
 
@@ -601,14 +617,14 @@ header{
         list-style: none;
         
         img{
-          width: 67vw;
-          height: 34.5vw;
-          margin-right: 7vw;
-          margin-left: 7vw;
+          width: 65vw;
+          height: 32vw;
+          margin-right: 5vw;
+          margin-left: 5vw;
 
           @include tab{
             width: 73vw;
-            height: 36.5vw;
+            height: 38vw;
           }
 
           @include sp-second{
@@ -708,6 +724,10 @@ header{
       transform : translate(350px, 0px);
       transition : all 1.3s;
 
+      @include pc{
+        width: 56vw;
+    }
+
     @include tab{
         top: -240px;
         right: 5%;
@@ -733,7 +753,6 @@ header{
       .box-content{
         padding: 5.2vw 6vw;/*75 80*/
        
-
         @include pc{
           padding: 3.2vw 4vw;/*75 80*/
         }
@@ -754,13 +773,14 @@ header{
 
     
       h3{
-        font-size: 2.8vw;
+        font-size: 40px;
         margin-bottom: 40px;
         letter-spacing: 4px;
         font-family: 'Noto Sans JP', sans-serif;
 
         @include pc{
         margin-bottom: 3vw;
+        font-size: 34px;
         }
       
 
@@ -778,8 +798,8 @@ header{
       }/*h3*/
 
       p{
-        line-height: 1.75;
-        font-size: 1.1vw;
+        line-height: 1.8;
+        font-size: 18px;
 
 
   @include pc{
@@ -808,16 +828,21 @@ header{
     .background-title{
       z-index: -1;
       position: relative;
-        
+ 
+
 
       p{
         position: absolute;
-        color: black;
+        color: white;
         font-size: 19vw;
         @include font-type;
-        font-weight: bold;
+        font-weight: 800;
         top: -120px;
         left: -300px;
+        animation : scrollSample01 30s linear infinite;
+
+      
+
 
         @include sp{
           top: -30px;
@@ -829,9 +854,21 @@ header{
           top: -20px;
           left: -30px;
         }
-  
+
+     
       }  /*p*/
+
+      @keyframes scrollSample01{
+        0% { transform: translateX(-90%)}
+        100% { transform: translateX(70%)}
+        }
+        
+
     }/*background-title*/
+
+
+
+  
 
 
 
@@ -895,18 +932,18 @@ header{
   @include tab{
     box-sizing: border-box;
     width: 560px;
-    height: 380px;
+    height: 420px;
   }
 
   @include sp{
-    width: 85%;
-    height: 70vw;
+    width: 420px;
+    height: 450px;
   }
 
 
   @include sp-second{
     width: 300px;
-    height: 430px;
+    height: 480px;
   }
 
 
@@ -917,12 +954,12 @@ header{
       right: 50px;
 
       @include pc{
-        top: -115px;
+        top: -52px;
         right: -20px;
       }
 
       @include tab{
-        top: 10px;
+        top: 50px;
         right: -20px;
       }
 
@@ -982,6 +1019,7 @@ header{
         font-size: 30px;
         color: #4D391B;
         @include font-type;
+        font-weight: 800;
 
 
         @include tab{
@@ -992,10 +1030,9 @@ header{
         span{
           font-size: 20px;
           margin-left: 18px;
-          font-weight: normal;
+          font-weight: bold;
           font-family: 'Noto Sans JP', sans-serif;
         
-
           @include tab{
             font-size: 18px;
           }
@@ -1027,21 +1064,25 @@ header{
       }/*h4*/
 
       p{
+
+        line-height: 2.1;
+
         @include tab{
-          font-size: 12px;
+          font-size: 13px;
           width: 300px;
         }
 
         @include sp{
-          width: 70vw;
-          font-size: 2.5vw;
+          font-size: 14px;
+          width: 340px;
+          line-height: 2;
         }
 
 
         @include sp-second{
           font-size: 13px;
           width: 250px;
-          margin-bottom: 35px;
+          margin-bottom: 30px;
         }
 
       }
@@ -1052,14 +1093,14 @@ header{
         margin-top: 45px;
 
         @include tab{
-          margin-top: 4vw;
+          margin-top: 26px;
           width: 25vw;
           text-align: center;
         }
 
 
         @include sp-second{
-          width: 120px;
+          width: 140px;
         }
         
 
@@ -1070,14 +1111,14 @@ header{
           @include font-type;
           padding: 20px 80px;
           font-size: 20px;
-          font-weight: bold;
+          font-weight: 800;
 
           @include tab{
-            padding: 2vw 2vw;
+            padding: 13px 10px;
+            
           }
 
           @include sp-second{
-            padding: 3vw 2vw;
             font-size: 16px;
             margin: 0 auto;
             text-align: center;
@@ -1095,7 +1136,7 @@ header{
       writing-mode: vertical-rl;
       font-size: 97px;
       font-style: italic;
-      font-weight: bold;
+      font-weight: 800;
       margin: 0 0 0 auto;
       text-align: center;
 
@@ -1135,6 +1176,7 @@ header{
     font-size: 60px;
     margin-bottom: 65px;
     @include font-type;
+    font-weight: 800;
 
 
     @include sp{
@@ -1159,7 +1201,7 @@ header{
 
     .works-item{
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       opacity : 0;
       transform : translate(0, 50px);
       transition : all 1.3s;
@@ -1173,6 +1215,15 @@ header{
       img{
         width: 41vw;/*575*/
         height: 26vw;/*365*/
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+        @include tab{
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+    
 
       @include sp{
           width: 80%;/*575*/
@@ -1193,6 +1244,8 @@ header{
   
 
     h4{
+      font-weight: 800;
+
       @include font-type;
       font-size: 30px;
 
@@ -1207,7 +1260,7 @@ header{
       .item-name-jp{
         font-family: 'Noto Sans JP', sans-serif;
         font-size: 28px;
-        font-weight: 300;
+        font-weight: 600;
         
         @include pc{
           font-size: 2.6vw;
@@ -1242,7 +1295,7 @@ header{
   h2{
     text-align: center;
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 75px;
     @include font-type;
 
@@ -1350,27 +1403,27 @@ table{
 .about-menu{
   font-size: 26px;
   width: 27vw;/*380*/
-  padding: 2.1vw 2.8vw;/*30/40*/
+  padding: 74px 10px;/*30/40*/
   background-color: #FFFFFF;
   line-height: 1.25;
   position:relative;
   text-align: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  font-weight: bold;
+
 
 
   @include pc{
     font-size: 26px;
-    padding: 2.1vw 2.2vw;/*30/40*/
-    width: 260px;
+    padding: 2.1vw 6px;/*30/40*/
+    width: 270px;
   }
 
   @include tab{
     font-size: 3vw;
     width: 35%;
     padding: 3vw 15px;
-
-
   }
 
   @include sp{
@@ -1380,7 +1433,6 @@ table{
     font-size: 16px;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     font-size: 28px;
@@ -1396,6 +1448,8 @@ table{
   @include sp-second{
     width: 290px;
     font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
  
@@ -1413,8 +1467,15 @@ table{
   }
 
   @include tab{
-    font-size: 15px;
+    font-size: 11px;
   }
+
+
+  @include sp{
+    font-size: 14px;
+  }
+
+  
 
 
   }/*sub-menu*/
@@ -1423,11 +1484,11 @@ table{
 
 .about-menu::before{
   content: "";
-  width:1px;
-  border-right: 1px solid #707070;
+  width:2px;
+  border-right: 2px solid #000000;
   position: absolute;
   left: 0px;
-  top: 2vw;
+  top: 4vw;
   bottom: 30px;
   height: 160px;
 
@@ -1465,14 +1526,15 @@ table{
   font-family: 'Noto Sans JP', sans-serif;
   text-align: center;
   background-color: #FFFFFF;
-  padding: 40px 2.8vw;
+  padding: 74px 2.8vw;
   position: relative;
   font-size: 26px;
+  font-weight: bold;
   
 
   @include pc{
     padding: 30px 2.2vw;
-    width: 260px;
+    width: 280px;
   }
 
   @include tab{
@@ -1500,12 +1562,12 @@ table{
   .price-number{
     @include font-type;
     font-size: 3.3vw;/*46px*/
-    background:linear-gradient(transparent 70%, #FFDB41 0%);
+    background:linear-gradient(transparent 80%, #FFDB41 0%);
     font-weight: bold;
 
 
     @include pc{
-      font-size:40px;
+      font-size:34px;
     }
 
     @include tab{
@@ -1517,13 +1579,14 @@ table{
 
    @include sp{
      font-size:35px;
-     width: 200px;
+     width: 220px;
    }
 
  
     .sub-price{
       font-size: 1.7vw;/*24*/
       font-weight: normal;
+      letter-spacing: 0.075em;
 
       @include pc{
         font-size:26px;
@@ -1544,7 +1607,7 @@ table{
   .sub-extra{
     font-size: 15px;
     display: block;
-    padding-top: 10px;
+    padding-top: 13px;
     font-weight: bold;
 
     @include tab{
@@ -1567,10 +1630,10 @@ table{
 .about-price::before{
   content: "";
   width:1px;
-  border-right: 1px solid #707070;
+  border-right: 2px solid #000000;
   position: absolute;
   left: 0px;
-  top: 2vw;
+  top: 4vw;
   bottom: 25px;
   height: 160px;
 
@@ -1612,7 +1675,7 @@ table.active{
 }/*price*/
 
 .note{
-  padding-top: 50px;
+  padding-top: 30px;
   font-size: 20px;
   text-align: center;
 
@@ -1647,7 +1710,18 @@ table.active{
 .footer{
   background-image: url(../img/footer-background.png);
   background-size: cover;
+  position: relative;
+  padding-bottom: 90px;
 
+  @include tab(){
+    padding-bottom: 240px;
+  }
+
+  @include sp{
+    padding-bottom: 80px;
+  }
+
+  
   &-inner{
     max-width: 1240px;
     margin: 0 auto;
@@ -1748,6 +1822,13 @@ table.active{
   display: flex;
   justify-content: center;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+
 
   @include tab{
     display: block;
@@ -1755,28 +1836,31 @@ table.active{
 
   .footer-tel{
     background-color: #FFFFFF;
-    padding: 25px 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-top-left-radius: 10px;
     width: 380px;
 
     @include tab{
       border-top-right-radius: 10px;
-      padding: 3vw 13vw;
-      width: 80%;
+      width: 470px;
       margin: 0 auto;
     }
 
-
-    @include sp-second{
-      padding: 6vw 5vw;
+    @include sp{
+      display: none;
     }
+
+ 
 
 
 
 
     h3{
-      font-size: 25px;
+      font-size: 35px;
       @include font-type;
+      font-weight: bold;
+
 
       
       @include tab{
@@ -1785,20 +1869,25 @@ table.active{
 
       @include sp{
         font-size: 1.2em;
-      }
-
-
-
-
-      
+      }      
     }
+
+
     p{
       font-size: 13px;
+      font-weight: normal;
+      width: 330px;
+      margin: 0 auto;
 
+      @include sp{
+        width: 270px;
+      } 
 
     @include sp-second{
       font-size: 12px;
     }
+
+
 
     }/*p*/
 
@@ -1809,20 +1898,29 @@ table.active{
 
   .footer-contact{
     background-color: #FFDB41;
-    padding: 25px 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     border-top-right-radius: 10px;
     width: 380px;
 
     @include tab{
-      padding: 3vw 3vw;
-      width: 80%;
+      width: 470px;
       margin: 0 auto;
       border-top-right-radius: 0px;
       }
 
+      @include sp{
+        width: 300px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+
 
     h3{
-      font-size: 35px;
+      font-size: 40px;
       @include font-type;
 
 

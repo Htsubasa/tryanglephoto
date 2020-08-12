@@ -100,19 +100,22 @@
 
 @media screen and (max-width:1024px) { 
     .slick-next::after{
-        right: -8vw;
+        right: -7vw;
 }
 }
 
 @media screen and (max-width:768px) { 
     .slick-next::after{
-        right: -11vw;
+        right: -13vw;
 }
 }
 
 @media screen and (max-width:425px) { 
     .slick-next::after{
         width: 60px;
+        right: -14vw;
+        top: 0px;
+
 }
 
 }
@@ -154,14 +157,15 @@ background-size: contain;
 @media screen and (max-width:768px) { 
     .slick-prev::after{
         width: 10vw;
-        right: -20vw;
+        right: -18vw;
 }
 }
 
 @media screen and (max-width:425px) { 
     .slick-prev::after{
         width: 60px;
-        right: -23vw;
+        right: -21vw;
+        top: 0px;
 }
 }
 
@@ -212,17 +216,20 @@ background-size: contain;
 {
     position: absolute;
     bottom: -25px;
-
     display: block;
-
     width: 100%;
     padding: 0;
     margin: 0;
-
     list-style: none;
-
     text-align: center;
 }
+
+@media screen and (max-width:425px) { 
+    .slick-dots{
+        bottom: -20px;
+}
+}
+
 .slick-dots li
 {
     position: relative;
