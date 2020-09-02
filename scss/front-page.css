@@ -674,8 +674,8 @@ html body .mainvisual-wrap {
   /*90vh*/
   -webkit-box-shadow: 6px 6px 6px #00000029;
           box-shadow: 6px 6px 6px #00000029;
-  background-image: url(../img/mainvisual-background.png);
-  background-size: 100vw;
+  background-image: url(../img/mainvisual-editing.png);
+  background-size: cover;
   /*h3*/
   /*.dot-number*/
 }
@@ -2055,7 +2055,7 @@ html body .price table .about-price .price-number {
 html body .price table .about-price .price-number .sub-price {
   font-size: 1.7vw;
   /*24*/
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.075em;
 }
 
@@ -2184,7 +2184,7 @@ html body .note-responsive {
 }
 
 html body .footer {
-  background-image: url(../img/footer-background.png);
+  background-image: url(../img/bottom-background.png);
   background-size: cover;
   position: relative;
   padding-bottom: 90px;
@@ -2306,7 +2306,7 @@ html body .footer-inner .footer-nav ul li:hover {
 
 html body .footer-inner .footer-nav ul .f-nav-privacy {
   font-size: 20px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 @media (max-width: 1024px) {

@@ -325,12 +325,11 @@ header{
 
 
 
+
+
 .mainvisual{
   margin-bottom: 0px;
-  background-image: url(../img/whiteball.png);
-  background-position: 78vw 37vw;
-  padding-bottom: 60px;
-
+ 
   @include tab{
     margin-bottom: 60px;
     background-position: 67vw 27vw;
@@ -350,7 +349,7 @@ header{
     position: relative;
     height: 46vw;/*90vh*/
     box-shadow: 6px 6px 6px #00000029;
-    background-image: url(../img/yellow-car.png);
+    background-image: url(../img/portrait.png);
     background-size: cover;
 
     @include pc{
@@ -536,328 +535,562 @@ header{
     left: 0;
     right: 0;
     margin: auto;
-    background-color: rgba(0,0,0,0.4);
+      background-color: rgba(0,0,0,0.4);
     width: 90%;
     height: 90%;
-    
   }/*warap-after*/
 
 }
 
 
 
+.career{
 
-.works{
-    .logo-list{
-        width: 84%;
-        display: flex;
+  background-image: url(../img/whiteball.png);
+  background-position: 50px 77px;
+  padding-top: 60px;
+
+  @include tab{
+    background-position: 50px 10px;
+  }
+
+  .background-gray{
+    position: relative;
+    top: -60px;
+    @include tab{
+      top: -120px;
+    }
+
+
+    img{
+      position: absolute;
+      z-index: -1;
+
+      @include pc{
+        width: 600px;
+      }
+
+      @include tab{
+        width: 500px;
+      }
+
+      @include sp(){
+        width: 400px;
+      }
+
+
+      @include sp-second(){
+        width: 300px;
+      }
+
+    }
+
+  }
+
+
+  @include sp{
+  }
+
+  .background{
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+
+ @include sp{
+   width: 100%;
+  }
+
+
+
+
+
+    .yellow-name{
+      overflow: hidden;
+      position: absolute;
+      color: #FFDB41;
+      font-size: 163px;
+      @include font-type;
+      font-style: italic;
+      font-weight: 800;
+      writing-mode: vertical-rl;
+      right: -330px;
+      top: -60px;
+      z-index: -1;
+      height: 1000px;
+
+      opacity : 0;
+      transform : translate(0px, -300px);
+      transition : all 1.5s;
+
+      @include pc{
+        right: -135px;
+        font-size: 140px;
+      }
+     
+
+      @include tab{
+      font-size: 100px;
+      top: 550px;
+      right: 80px;
+      }
+
+      @include sp{
+        font-size: 70px;
+        top: 670px;
+        right: 10px;
+        height: 700px;
+      }
+
+ 
+
+    }/*yellow-name*/
+
+    .yellow-name.active{
+      opacity: 1;
+      transform : translate(0px, 0px);
+    }
+  }/*background*/
+  
+
+
+
+  &-wrapper{
+    width: 1010px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include pc{
+      width: 740px;
+    }
+
+
+    @include tab{
+      display: block;
+      width: 100%;
+    }
+
+   
+
+
+    .career-intro{
+      width: 415px;
+      margin-top: 150px;
+
+      opacity : 0;
+      transform : translate(-250px, 0px);
+      transition : all 1.5s;
+
+
+      @include pc{
+        margin-top: 80px; 
+      }
+
+      @include tab{
         margin: 0 auto;
-        justify-content: space-around;
+        width: 530px;
+      }
+
+      @include sp{
+        width: 90%;
+      }
+  
+
+      .corporate{
+        margin-bottom: 24.5px;
+        font-size: 17px;
+        @include font-type;
+        font-style: italic;    
+        font-weight: 600;
+      }
+
+      h3{
+        margin-bottom: 67px;
+        font-size: 36px;
+        letter-spacing: 0.4em;
+
+
+      @include pc{
+        margin-bottom: 50px;
+      }
+
+      @include sp-second{
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+
+      }
+
+
+      h4{
+        font-size: 18px;
+        margin-bottom: 17.5px;
+        letter-spacing: 0.4em;
+        display: flex;
+        align-items: center;
+
+      }
+
+      h4:after {
+        border-top: 1px solid;
+        content: "";
+        flex-grow: 1;
+      }
+
+
+
+      .intro{
+        margin-bottom: 42.5px;
+        font-size: 15px;
+        letter-spacing: 0.025em;
+        line-height: 2;
+      }
+    }/*career-intro*/
+
+    .career-intro.active{
+      opacity: 1;
+      transform : translate(0px, 0px);
+    }
+
+    .profile-img{
+
+      transform : translate(0, 50px);
+  transition : all 1.3s;
+  transform: scale(0.5);
+
+
+      @include tab{
+        width: 540px;
+        margin: 0 auto;
+      }
+
+      @include sp{
+        width: 425px;
+      }
+
+      @include sp-second(){
+        width: 320px;
+      }
+
+      
+
+
+      img{
+        height: 854px;
 
         @include pc{
-            justify-content: space-between;
+          height: 540px;
+          margin-top: 230px;
         }
 
         @include tab{
-            width: 90%;
-            flex-wrap: wrap;
-            justify-content: center;
+          margin-top: 30px;
         }
 
-         @include tab{
-            width: 95%;
+        @include sp{
+          width: 425px;
+          margin-top: 0px;
         }
 
-        .logo-item{
-            background-color: #EFEFEF;
-            border-radius: 50%;
-            width: 17.6%;
-            height: 15vw;
-            text-align:center;
-            position: relative;
-            cursor: pointer;
-
-            opacity : 0;
-            transform : translate(0, 50px);
-            transition : all 1.3s;
-            transform: scale(0.6);
+        @include sp-second(){
+          width: 320px;
+          height: 430px;
+        }
+  
 
 
-            @include pc{
-                width: 18%;
-                height: 15.1vw;    
-            }
+      }/**/
+    }
 
-            @include tab{
-                width: 27%;
-                height: 24vw;   
-                margin-right: 15px;
-                margin-left: 15px; 
-            }
-
-            @include tab{
-                width: 30%;
-                height: 27vw;   
-                margin-right: 5px;
-                margin-left: 5px; 
-            }
-
-            @include sp-second{
-                width: 30%;
-                height: 27vw;   
-                margin-right: 5px;
-                margin-left: 5px; 
-            }
+    .profile-img.active{
+      opacity: 1;
+      transform: translate(0, 0);  
+      transform: scale(1);    
+    }
+    
 
 
-            img{
-                position: absolute;          /* 位置指定 */
-                top: 40%;                    /* 親要素の半分下にずらす */
-                left: 50%;                   /* 親要素の半分右にずらす */
-                transform: translateY(-50%) translateX(-50%);    /* 要素自体の半分、上と左にずらす */                
-                width: 45%;
-            }
-            p{
-                font-size: 1.3vw;
-                position: absolute;          /* 位置指定 */
-                top: 70%;                    /* 親要素の半分下にずらす */
-                left: 50%;                   /* 親要素の半分右にずらす */
-                transform: translateY(-50%) translateX(-50%);    
-                width: 60%;
-                font-family: 'Noto Sans JP', sans-serif;
-                font-weight: bold;
-                letter-spacing: 0.3em;
-
-                @include tab{
-                    font-size: 2.7vw;
-                }
-
-                @include sp-second{
-                    font-size: 12px;
-                    letter-spacing: initial;
-                }
-
-            }/*p*/
-        }/*logo-item*/
+  }/*wrapper*/
+}/*career*/
 
 
-    .logo-item.active{
+
+
+.introduction{
+  margin-bottom: 200px;
+
+  @include sp{
+    margin-bottom: 150px;
+  }
+
+  &-wrap{
+    display: flex;
+    position: relative;
+
+    .introduction-img{
+      width: 47.5vw;
+      height: 37vw;
+      margin-top: 60px;
+
+      opacity : 0;
+      transform : translate(-350px, 0px);
+      transition : all 1.5s;
+
+
+      @include tab{
+        margin-top: 530px;
+        width: 70%;
+        height: 50%;
+      }
+
+      @include sp{
+        margin-top: 670px;
+        width: 95%;
+      }
+
+      @include sp-second(){
+        margin-top: 234vw;
+      }      
+    }
+
+    .introduction-img.active{
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    .wood-item{
+      background-image: url(../img/wood-background.png);
+      background-size: cover;
+      width:61.5vw;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      box-sizing: border-box;
+      height: auto;
+      padding: 5vw 12.5vw;
+      top: -5px;
+
+      opacity : 0;
+      transform : translate(350px, 0px);
+      transition : all 1.5s;
+
+      @include tab{
+        width: 95%;
+        padding: 8vw 7vw;
+      }
+
+      .item-box{
+        width: 43vw;
+
+      @include tab{
+        width: 100%;
+      }
+
+      @include sp{
+        width: 100%;
+      }
+
+      @include sp-second(){
+        width: 100%;
+      }
+
+ 
+
+      h3{
+        font-size: 30px;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 2.5vw;
+
+        @include tab{
+          font-size: 24px;
+        }
+
+        @include sp-second(){
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+  
+
+
+      }/*h3*/
+
+      .story-part{
+        letter-spacing: 0.1em;
+        line-height: 2;
+        color: white;
+        font-size: 15px;
+
+        @include tab{
+        font-size: 13px;
+        }
+
+        @include sp-second(){
+          font-size: 3.6vw;
+          }
+  
+
+      }
+
+      h4{
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+        margin-top: 2vw;
+        text-align: right;
+        letter-spacing: 0.4em;
+
+        @include tab{
+          font-size: 18px;
+        }
+      }
+    }/*item-box*/
+    }/*wood-item*/
+
+    .wood-item.active{
+      opacity: 1;
+      transform: translate(0, 0);  
+    }
+
+    
+
+  }/*wrap*/
+}/*introduction*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.works{
+  padding-bottom: 130px;
+
+  @include sp{
+    padding-bottom: 0px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 65px;
+    @include font-type;
+    font-weight: 800;
+
+
+    @include sp{
+      font-size: 3em;
+      margin-bottom: 45px;
+    }
+
+    @include sp-second(){
+      font-size: 2.5em;
+    }
+
+  }
+
+  &-wrap{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    @include sp{
+      display: block;
+    }
+
+    .works-item{
+      text-align: center;
+      margin-bottom: 60px;
+      opacity : 0;
+      transform : translate(0, 50px);
+      transition : all 1.3s;
+      transform: scale(0.6);
+
+
+      @include sp{
+        margin-bottom: 30px;
+      }
+
+      img{
+        width: 41vw;/*575*/
+        height: 26vw;/*365*/
+        margin-right: 15px;
+        margin-left: 15px;
+
+
+        @include tab{
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+    
+
+      @include sp{
+          width: 80%;/*575*/
+          height: 50vw;/*365*/
+      }
+    
+
+
+      }/*img*/
+    }/*works-item*/
+
+
+    .works-item.active{
       opacity: 1;
       transform: translate(0, 0);  
       transform: scale(1);    
   }
-
-  .logo-item.is-active{
-    transition: all 0.2s ease-out;
-}
   
 
-        .logo-item:nth-child(2){
-            background-color: #4D391B;
+    h4{
+      font-weight: 800;
 
-            p{
-              color: white;
-            }
-        }
+      @include font-type;
+      font-size: 30px;
 
-    }/*logo-list*/
-
-
-
-.title-part{
-    text-align: center;
-    margin-bottom:120px;
-    margin-top: 70px;
-    display:none;
-
-
-    @include pc{
-        margin-bottom:70px;
-    }
-
-    h2{
-        font-size: 40px;
-        opacity : 0;
-        transform : translate(0, 30px);
-        transition : all 1.3s;
-     
-
-        @include font-type;
-        
-        @include sp{
-          font-size: 33px;
-        }
-
-        @include sp-second{
-          font-size: 28px;
-        }
-  
-
-        .sub-h2{
-            font-size: 33px;
-            font-weight: bold;
-            font-family: 'Noto Sans JP', sans-serif;
-            position: relative;    
-            display: inline-block;
-            margin-left: 60px;
-            letter-spacing: 0.3em;
-
-
-            @include sp{
-              font-size: 28px;
-              margin-left: 35px;
-            }
-
-            @include sp-second{
-              font-size: 23px;
-              margin-left: 25px;
-              letter-spacing: 0.15em;
-            }
-
-        }/*sub-h2*/
-
-
-        .sub-h2:before{
-          content:"";
-          display:inline-block;
-          height:35px;
-          width:1px;
-          position:absolute;
-          background-color:#000000;
-          left:-29px;    
-          top:9px;
-
-
-          @include sp{
-            left:-17px;    
-            top:10px;
-            height:26px;
-          }
-
-          @include sp-second{
-            left:-13px;  
-            height:20px;  
-          }
-
-      }/*sub-h2*/
-  
-    }/*h2*/
-
-    h2.active{
-      opacity: 1;
-      transform: translate(0, 0);  
-    }
-
- 
-
-    p{
-        padding-top: 45px;
-        letter-spacing: 0.025em;
-        opacity : 0;
-        transform : translate(0, 30px);
-        transition : all 1.3s;
-     
-        @include sp-second{
-          font-size: 14px;
-          width: 90%;
-          margin: 0 auto;
-        }
-
-
-    }
-
-    p.active{
-      opacity: 1;
-      transform: translate(0, 0);  
-    }
-
-}/*title-part*/
-
-.title-part.is-show{
-  display:block;
-}
-
-
-.gallery{
-margin-top: 50px;
-
-&-wrap{
-    width: 90%;
-    margin: 0 auto;
-
-    .gallery-item{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 160px;
-
-        @include pc{
-
-        }
-       
-        
-        li{
-            list-style: none;
-            width: 25vw;
-            height: 20vw;
-
-            opacity : 0;
-            transform : translate(0, 50px);
-            transition : all 1.3s;
-
-
-                @include pc{
-                    width: 30vw;
-                    height: 25vw;    
-                }
-
-                @include tab{
-                    width: 40vw;
-                    height: 35vw; 
-                }
-
-                @include sp{
-                    width: 45vw;
-                    height: 40vw; 
-                    padding: 5px 5px;
-                }
-
-            img{
-                padding: 4.5px 4.5px;
-                width: 25vw;
-                height: 20vw;
-
-                @include pc{
-                    width: 30vw;
-                    height: 25vw;    
-                }
-
-                @include tab{
-                    width: 40vw;
-                    height: 35vw; 
-                }
-
-                @include sp{
-                    width: 45vw;
-                    height: 40vw; 
-                    padding: 2px 2px;
-                }
-               
-            }/*img*/
-        }/*li*/
-
-        li.active{
-          opacity: 1;
-          transform: translate(0, 0);  
-          transform: scale(1);    
+      @include pc{
+        font-size: 3.1vw;
       }
 
+      @include sp{
+        font-size: 6vw;
+      }
 
-    }/*ul*/
-}/*&-wrap*/
+      .item-name-jp{
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        
+        @include pc{
+          font-size: 2.6vw;
+        }
 
-}/*#gallery*/
-}/*works*/
+        @include sp{
+          font-size: 5vw;
+        }
+      }/*.item-name-jps*/
+
+      .item-name-jp::before {
+        content: "/ ";
+      }/*.item-name-jp*/
+    }
+  }/*wrap*/
+
+}
+
+
+
+
+
 
 
 
@@ -1276,247 +1509,251 @@ table.active{
     display: initial;
 
   }
+  
+
   }
+
 }
 
 
 
 .footer{
   background-image: url(../img/bottom-background.png);
-  background-size: cover;
-  position: relative;
-  padding-bottom: 90px;
-
-  @include tab(){
-    padding-bottom: 240px;
-  }
-
-  @include sp{
-    padding-bottom: 80px;
-  }
-
+    background-size: cover;
+    position: relative;
+    padding-bottom: 90px;
   
-  &-inner{
-    max-width: 1240px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 80px;
-    padding-right: 15px;
-    padding-left: 15px;
+    @include tab(){
+      padding-bottom: 240px;
+    }
+  
+    @include sp{
+      padding-bottom: 80px;
+    }
+  
+    
+    &-inner{
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 50px;
+      padding-bottom: 80px;
+      padding-right: 15px;
+      padding-left: 15px;
+  
+      @include tab{
+        display: block;
+        text-align: center;
+        padding-bottom: 40px;
+      }
+  
+  
+  
+    .footer-logo{
+      font-size: 50px;
+      @include font-type;
+      color: #FFFFFF;
+      font-weight: bold;
+  
+      @include pc{
+        font-size: 2.8em;
+      }
+  
+      @include sp-second{
+        font-size: 2em;
+      }
+  
+  
+  
+  
+    }/*footer-logo*/
+  
+    .footer-nav{
+  
+      @include tab{
+        display: inline-block;
+      }
+  
+  
+      ul{
+      @include font-type;
+      display: flex;
+      list-style: none;
+      font-size: 24px;
+      
+      @include pc{
+        font-size: 1.3em;
+      }
+  
+      @include sp-second{
+        font-size: 1em;
+      }
+  
+  
+    
+  
+      li{
+        margin-left: 60px;
+        line-height: 60px;
+        font-weight: bold;
+        
+        @include pc{
+          margin-left: 3vw;
+        }
+  
+  
+        a{
+          color: #FFFFFF;
+        }/*a*/  
+        
+      }/*li*/
+  
+      li:hover{
+        transform: scale(1.3);
+        transition: 1s;
+      }
+  
+      .f-nav-privacy{  background-image: url(../img/bottom-background.png);
 
+        font-size: 20px;
+        font-weight: bold;
+  
+        @include pc{
+          font-size: 0.9em;
+        }
+  
+      }/*f-nav-privacy*/
+    }/*ul*/
+    }/*footer-nav*/
+    }/*footer-inner*/
+  
+  
+  .footer-center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  
+  
     @include tab{
       display: block;
-      text-align: center;
-      padding-bottom: 40px;
     }
-
-
-
-  .footer-logo{
-    font-size: 50px;
-    @include font-type;
-    color: #FFFFFF;
-    font-weight: bold;
-
-    @include pc{
-      font-size: 2.8em;
-    }
-
-    @include sp-second{
-      font-size: 2em;
-    }
-
-
-
-
-  }/*footer-logo*/
-
-  .footer-nav{
-
-    @include tab{
-      display: inline-block;
-    }
-
-
-    ul{
-    @include font-type;
-    display: flex;
-    list-style: none;
-    font-size: 24px;
-    
-    @include pc{
-      font-size: 1.3em;
-    }
-
-    @include sp-second{
-      font-size: 1em;
-    }
-
-
   
-
-    li{
-      margin-left: 60px;
-      line-height: 60px;
-      font-weight: bold;
-      
-      @include pc{
-        margin-left: 3vw;
-      }
-
-
-      a{
-        color: #FFFFFF;
-      }/*a*/  
-      
-    }/*li*/
-
-    li:hover{
-      transform: scale(1.3);
-      transition: 1s;
-    }
-
-    .f-nav-privacy{
-      font-size: 20px;
-      font-weight: bold;
-
-      @include pc{
-        font-size: 0.9em;
-      }
-
-    }/*f-nav-privacy*/
-  }/*ul*/
-  }/*footer-nav*/
-  }/*footer-inner*/
-
-
-.footer-center{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-
-
-  @include tab{
-    display: block;
-  }
-
-  .footer-tel{
-    background-color: #FFFFFF;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-top-left-radius: 10px;
-    width: 380px;
-
-    @include tab{
-      border-top-right-radius: 10px;
-      width: 470px;
-      margin: 0 auto;
-    }
-
-    @include sp{
-      display: none;
-    }
-
- 
-
-
-
-
-    h3{
-      font-size: 35px;
-      @include font-type;
-      font-weight: bold;
-
-
-      
+    .footer-tel{
+      background-color: #FFFFFF;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-top-left-radius: 10px;
+      width: 380px;
+  
       @include tab{
-        font-size: 1.5em;
-      }
-
-      @include sp{
-        font-size: 1.2em;
-      }      
-    }
-
-
-    p{
-      font-size: 13px;
-      font-weight: normal;
-      width: 330px;
-      margin: 0 auto;
-
-      @include sp{
-        width: 270px;
-      } 
-
-    @include sp-second{
-      font-size: 12px;
-    }
-
-
-
-    }/*p*/
-
-    
-
-  }/*footer-tel*/
-
-
-  .footer-contact{
-    background-color: #FFDB41;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-top-right-radius: 10px;
-    width: 380px;
-
-    @include tab{
-      width: 470px;
-      margin: 0 auto;
-      border-top-right-radius: 0px;
-      }
-
-      @include sp{
-        width: 300px;
         border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        width: 470px;
+        margin: 0 auto;
       }
-
-
-
-    h3{
-      font-size: 40px;
-      @include font-type;
-
-
-      @include tab{
-        font-size: 1.8em;
-      }
-
+  
       @include sp{
-        font-size: 1.5em;
+        display: none;
       }
-    }
-
-    p{
-      font-weight: bold;
-      font-size: 17px;
-    }
-  }/*footer-contract*/
-
-}
-
-
-}/*footer*/
-}/*body*/
-
-}
+  
+   
+  
+  
+  
+  
+      h3{
+        font-size: 35px;
+        @include font-type;
+        font-weight: bold;
+  
+  
+        
+        @include tab{
+          font-size: 1.5em;
+        }
+  
+        @include sp{
+          font-size: 1.2em;
+        }      
+      }
+  
+  
+      p{
+        font-size: 13px;
+        font-weight: normal;
+        width: 330px;
+        margin: 0 auto;
+  
+        @include sp{
+          width: 270px;
+        } 
+  
+      @include sp-second{
+        font-size: 12px;
+      }
+  
+  
+  
+      }/*p*/
+  
+      
+  
+    }/*footer-tel*/
+  
+  
+    .footer-contact{
+      background-color: #FFDB41;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      border-top-right-radius: 10px;
+      width: 380px;
+  
+      @include tab{
+        width: 470px;
+        margin: 0 auto;
+        border-top-right-radius: 0px;
+        }
+  
+        @include sp{
+          width: 300px;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+  
+  
+  
+      h3{
+        font-size: 40px;
+        @include font-type;
+  
+  
+        @include tab{
+          font-size: 1.8em;
+        }
+  
+        @include sp{
+          font-size: 1.5em;
+        }
+      }
+  
+      p{
+        font-weight: bold;
+        font-size: 17px;
+      }
+    }/*footer-contract*/
+  
+  }
+  
+  
+  }/*footer*/
+  }/*body*/
+  
+  }
